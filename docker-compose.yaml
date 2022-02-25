@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  wkhtml:
+    image: wkhtml:0.1
+    volumes:
+      - ./output/:/output/
+    command: 
+      - sleep 5000
+
+volumes:
+  my-db:
