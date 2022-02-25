@@ -1,4 +1,4 @@
-#WkhtmlToPDF Docker Image
+# WkhtmlToPDF Docker Image
 
 This is a docker image of wkhtmltopdf tool.
 
