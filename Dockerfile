@@ -15,6 +15,7 @@ RUN mkdir /usr/lib/jvm
 RUN mv jdk-11 /usr/lib/jvm/openjdk-11-manual-installation/
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/openjdk-11-manual-installation/bin/java 1
 RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/openjdk-11-manual-installation/bin/javac 1
+COPY target/*.jar /app/app.jar
+EXPOSE 8080
 
-
-ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
+CMD [ "java", "-jar", "/app/app.jar" ]
